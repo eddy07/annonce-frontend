@@ -1,0 +1,32 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-stable">
+    <h1 class="title">Add Annonce</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeAnnonce()"><b style="color:gray">X</b></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doSaveAnnonce()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label"><b>Subject</b></span>
+          <input type="text" ng-model="annonceData.subject">
+        </label>
+        <label class="item item-input">
+            <fieldset>
+                <span class="input-label"><i class="ion-edit"></i> <b>Description</b></span>
+                <textarea cols="30" rows="5" ng-model="annonceData.description">texte</textarea>
+            </fieldset>
+        
+        </label>
+         <label class="item item-input">
+          <span class="input-label"><i class="ion-android-image"></i> <b>Image</b></span>
+          <input type="file" ng-model="annonceData.image">
+        </label>
+        <label class="item">
+          <button class="button button-block button-assertive" type="submit"><i class="ion-android-add"></i> Save</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
